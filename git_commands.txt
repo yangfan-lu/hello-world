@@ -1,0 +1,36 @@
+$### GIT BASICS
+git init //create empty git repo
+git clone <repo>
+
+git commit -m "<message>"
+
+git status //list which files are staged, unstaged, and untracked
+
+### GIT BRANCHES
+git branch
+git merge <branch> (<branch>)
+
+### GIT CONFIG
+git config --global user.name <name>
+git config --global user.email <email>
+git config --global alais.<alias-name> <git-command>
+// e.g. alias.glog "log --graph --online"
+git config --system core.editor <editor>
+git config --global --edit //open the global config file in a text editor for manual editing
+
+### GIT LOG
+git log -<limit> //limit the number of commits that are shown
+git log --online
+git log -p //display the full diff of each commit
+git log --stat //include which files were altered and the relative number of lines that were added or deleted from each of them
+git log --author="<pattern>" //search for commits by a particular author
+git log --grep="<pattern>" //search for commits with a commit message that matches <pattern>
+git log -- <file> //only display commits that have the specified file
+git log --graph --decorate //graph the commits, decorate adds names of branches or tags of commits shown
+
+### GIT REMOTE
+git remote add <name> <url>
+git remote
+git remote -v //shows more detail
+git push  <remote-name> <local-branch>
+
